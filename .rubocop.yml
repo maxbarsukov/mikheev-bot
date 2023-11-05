@@ -44,7 +44,7 @@ Style/CombinableLoops:
   Enabled: true
 
 Style/ClassAndModuleChildren:
-  EnforcedStyle: compact
+  Enabled: false
 
 Style/KeywordParametersOrder:
   Enabled: true
