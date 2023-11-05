@@ -16,4 +16,11 @@ class Score < ApplicationRecord
   def balance
     plus_count - minus_count
   end
+
+  def update_counters(pluses, minuses, plus_minuses)
+    self.plus_count += pluses
+    self.minus_count += minuses
+    self.plus_minus_count += plus_minuses
+    save!
+  end
 end
