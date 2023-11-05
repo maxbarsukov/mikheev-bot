@@ -6,6 +6,7 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
+    - 'vendor/**/*'
     - Gemfile
     - Rakefile
     - db/schema.rb
