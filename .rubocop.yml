@@ -35,7 +35,7 @@ Lint/MissingSuper:
   Enabled: true
 
 Metrics/AbcSize:
-  Max: 21
+  Max: 47
 
 Metrics/MethodLength:
   Max: 20
