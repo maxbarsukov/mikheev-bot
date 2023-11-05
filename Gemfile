@@ -11,9 +11,6 @@ gem 'activerecord', '~> 7.1', '>= 7.1.1'
 # A toolkit of support libraries and Ruby core extensions extracted from the Rails framework
 gem 'activesupport', '~> 7.1', '>= 7.1.1'
 
-# New wave Internationalization support for Ruby.
-gem 'i18n', '~> 1.14', '>= 1.14.1'
-
 # Rake is a Make-like program implemented in Ruby
 gem 'rake', '~> 13.1'
 
@@ -21,7 +18,7 @@ gem 'rake', '~> 13.1'
 gem 'sqlite3', '~> 1.6', '>= 1.6.8'
 
 # Ruby wrapper for Telegram's Bot API
-gem 'telegram-bot-ruby', '~> 1.0'
+gem 'telegram-bot-ruby', git: 'https://github.com/atipugin/telegram-bot-ruby.git', branch: 'master'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
