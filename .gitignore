@@ -1,0 +1,55 @@
+# Ignore IDE files
+*.swp
+/.idea/*
+/.vs/*
+/.vscode/*
+
+# Better proj settings for VS Code
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# SQLite
+/db/*.sqlite3
+/db/*.sqlite3-shm
+/db/*.sqlite3-wal
+/db/*.db
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore YARD info
+/.yardoc/*
+/docs/yard
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore Coveralls folder
+/coverage
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+*.log
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore application configuration
+/config/application.yml
+/config/database.yml
+/config/secrets.yml
+.env
+.env.docker
+
+# Docker
+.docker-sync/*
+docker-compose.override.yml
+
+# Misc
+.DS_Store
+.wakatime-project
