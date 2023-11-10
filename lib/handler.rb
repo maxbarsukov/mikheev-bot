@@ -24,6 +24,7 @@ class Handler
 
     @score = Score.find_by(user_id:, chat_id:)
     @score = Score.create(user_id:, chat_id:, username:) if @score.nil?
+    @score&.update(username:)
   end
 
   def chat_member_updated
@@ -51,10 +52,16 @@ class Handler
 
     count_plus_minus!
 
-    on(%r{^/top}) { answer_top }
-    on(%r{^/my_balance}) { answer_my_balance }
-    on(%r{^/chat_balance}) { answer_chat_balance }
-    on(%r{^/world_balance}) { answer_world_balance }
+    begin
+      on(%r{^/top}) { answer_top }
+      on(%r{^/my_balance}) { answer_my_balance }
+      on(%r{^/chat_balance}) { answer_chat_balance }
+      on(%r{^/world_balance}) { answer_world_balance }
+      on(%r{^/new_force}) { answer_new_force }
+      on(%r{^/status}) { answer_status }
+    rescue Telegram::Bot::Exceptions::ResponseError => e
+      logger.error("Reponse Error: #{e}")
+    end
   end
 
   private
@@ -138,11 +145,7 @@ class Handler
   end
 
   def answer_group_balance(scores, group_name)
-    result = scores.select(
-      Arel.sql(
-        'SUM(plus_count) as pluses, SUM(minus_count) as minuses, SUM(plus_minus_count) as plus_minuses'
-      )
-    )
+    result = scores.with_plus_minus.first
     pluses = result.pluses
     minuses = result.minuses
     plus_minuses = result.plus_minuses

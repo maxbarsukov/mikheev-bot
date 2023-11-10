@@ -5,6 +5,9 @@ require './models/application_record'
 
 class Score < ApplicationRecord
   scope :chat, ->(chat_id) { where(chat_id:) }
+  scope :with_plus_minus, lambda {
+    select('SUM(plus_count) as pluses, SUM(minus_count) as minuses, SUM(plus_minus_count) as plus_minuses')
+  }
 
   validates :username, presence: true, length: { minimum: 1 }
 
