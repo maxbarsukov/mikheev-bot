@@ -14,12 +14,8 @@ class Database
 
     private
 
-    def active_record_logger_path
-      'log/bot.log'
-    end
+    def active_record_logger_path = 'log/bot.log'
 
-    def database_config_path
-      'config/database.yml'
-    end
+    def database_config_path = 'config/database.yml'
   end
 end

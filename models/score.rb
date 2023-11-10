@@ -23,4 +23,18 @@ class Score < ApplicationRecord
     self.plus_minus_count += plus_minuses
     save!
   end
+
+  def plus_percent
+    all = plus_count + minus_count
+    return 0 if all.zero?
+
+    (plus_count.to_f / all).round(4) * 100
+  end
+
+  def minus_percent
+    all = plus_count + minus_count
+    return 0 if all.zero?
+
+    (minus_count.to_f / all).round(4) * 100
+  end
 end
