@@ -6,10 +6,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby File.read('.ruby-version').strip
 
 # Build a persistent domain model by mapping database tables to Ruby classes
-gem 'activerecord', '~> 7.1', '>= 7.1.1'
+gem 'activerecord', '~> 7.1'
 
 # A toolkit of support libraries and Ruby core extensions extracted from the Rails framework
-gem 'activesupport', '~> 7.1', '>= 7.1.1'
+gem 'activesupport', '~> 7.1'
 
 # Rake is a Make-like program implemented in Ruby
 gem 'rake', '~> 13.1'
