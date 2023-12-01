@@ -15,7 +15,7 @@ gem 'activesupport', '~> 7.1', '>= 7.1.1'
 gem 'rake', '~> 13.1'
 
 # Ruby library to interface with the SQLite3 database engine
-gem 'sqlite3', '~> 1.6', '>= 1.6.8'
+gem 'sqlite3', '~> 1.6'
 
 # Ruby wrapper for Telegram's Bot API
 gem 'telegram-bot-ruby', git: 'https://github.com/atipugin/telegram-bot-ruby.git', branch: 'master'
