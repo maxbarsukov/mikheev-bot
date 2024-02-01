@@ -120,7 +120,7 @@ GEM
     ruby-prof (1.6.3)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    sqlite3 (1.6.8-x86_64-linux)
+    sqlite3 (1.7.2-x86_64-linux)
     stringio (3.0.8)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -146,7 +146,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rake
   ruby-prof (~> 1.4, >= 1.4.3)
-  sqlite3 (~> 1.6, >= 1.6.8)
+  sqlite3 (~> 1.7)
   telegram-bot-ruby!
   yard
 
